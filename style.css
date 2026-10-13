@@ -1,0 +1,48 @@
+/* Thiết lập cơ bản */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    background-color: #f8fafc;
+}
+
+/* Khung bao bọc hai cột */
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    border: 2px dashed #94a3b8; /* Viền để dễ quan sát chiều cao của container */
+    padding: 10px;
+}
+
+/* Cột bên trái: Chiếm 60%, dạt sang trái */
+.left-column {
+    width: 60%;
+    float: left;
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 6px;
+    min-height: 200px;
+}
+
+/* Cột bên phải: Chiếm 38%, dạt sang phải (2% còn lại là khoảng trống tự nhiên giữa 2 cột) */
+.right-column {
+    width: 38%;
+    float: right;
+    background-color: lightgreen;
+    padding: 20px;
+    border-radius: 6px;
+    min-height: 200px;
+}
+
+/* Kỹ thuật Clearfix để container ôm trọn hai phần tử float, tránh sụp đổ chiều cao */
+.container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
